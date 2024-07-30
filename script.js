@@ -1,3 +1,4 @@
+// script.js
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('particleCanvas');
     const ctx = canvas.getContext('2d');
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let noiseSeed = Math.random() * 1000;
     let mouse = { x: null, y: null };
-    const maxCometGroups = 5;
+    const maxCometGroups = 3;
 
     function perlinNoise(x, y) {
         let n = noiseSeed + x * 0.01 + y * 0.01;
@@ -55,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
         constructor(x, y, speedX, speedY, color) {
             this.x = x;
             this.y = y;
-            this.initialSpeedX = speedX * 0.7;
-            this.initialSpeedY = speedY * 0.7;
+            this.initialSpeedX = speedX;
+            this.initialSpeedY = speedY;
             this.speedX = speedX;
             this.speedY = speedY;
             this.color = color;
@@ -75,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.speedY = this.initialSpeedY;
             } else if (this.speedUpTimer < this.normalSpeedDuration + this.speedUpDuration) {
                 // Speed up
-                this.speedX = this.initialSpeedX * 1.2;
-                this.speedY = this.initialSpeedY * 1.2;
+                this.speedX = this.initialSpeedX * 2;
+                this.speedY = this.initialSpeedY * 2;
             } else {
                 // Reset timer
                 this.speedUpTimer = 0;
@@ -169,26 +170,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     case 0: // Left
                         x = -50;
                         y = Math.random() * canvas.height;
-                        speedX = Math.random() * 1.5 + 1;
-                        speedY = (Math.random() - 0.5) * 1.5;
+                        speedX = Math.random() * 2 + 1;
+                        speedY = (Math.random() - 0.5) * 2;
                         break;
                     case 1: // Right
                         x = canvas.width + 50;
                         y = Math.random() * canvas.height;
-                        speedX = -(Math.random() * 1.5 + 1);
-                        speedY = (Math.random() - 0.5) *1.5;
+                        speedX = -(Math.random() * 2 + 1);
+                        speedY = (Math.random() - 0.5) * 2;
                         break;
                     case 2: // Top
                         x = Math.random() * canvas.width;
                         y = -50;
-                        speedX = (Math.random() - 0.5) * 1.5;
-                        speedY = Math.random() * 1.5 + 1;
+                        speedX = (Math.random() - 0.5) * 2;
+                        speedY = Math.random() * 2 + 1;
                         break;
                     case 3: // Bottom
                         x = Math.random() * canvas.width;
                         y = canvas.height + 50;
-                        speedX = (Math.random() - 0.5) * 1.5;
-                        speedY = -(Math.random() * 1.5 + 1);
+                        speedX = (Math.random() - 0.5) * 2;
+                        speedY = -(Math.random() * 2 + 1);
                         break;
                 }
 
