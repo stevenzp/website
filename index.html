@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven Zhang's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/2cb5dbac8d.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/fireworks.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+
+    <script>
+        function ad() {
+            document.querySelector('.icon1').classList.add('fa-beat');
+        }
+
+        function rd() {
+            document.querySelector('.icon1').classList.remove('fa-beat');
+        }
+
+        function ad2() {
+            document.querySelector('.icon2').classList.add('fa-beat');
+        }
+
+        function rd2() {
+            document.querySelector('.icon2').classList.remove('fa-beat');
+        }
+
+        function ad3() {
+            document.querySelector('.icon3').classList.add('fa-beat');
+        }
+
+        function rd3() {
+            document.querySelector('.icon3').classList.remove('fa-beat');
+        }
+
+        function ad4() {
+            document.querySelector('.toggleAnimation').classList.add('fa-beat');
+        }
+
+        function rd4() {
+            document.querySelector('.toggleAnimation').classList.remove('fa-beat');
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <div class="container">
+        <section class="intro" id="intro">
+            <h1 class="Name">Steven Zhang</h1>
+            <p>Fascinated about software engineering, game theory, algorithms, and AI agents.</p>
+            <div class="social-icons">
+                <a href="mailto:stevenza@umich.edu"><i onmouseover="ad()" onmouseout="rd()"
+                        class="fa-regular fa-envelope fa-2xl icon1"></i></a>
+                <a href="https://www.linkedin.com/in/stevenz-/"><i onmouseover="ad2()" onmouseout="rd2()"
+                        class="fa-brands fa-linkedin fa-2xl icon2"></i></a>
+                <a href="https://github.com/stevenz-programs"><i onmouseover="ad3()" onmouseout="rd3()"
+                        class="fa-brands fa-github fa-2xl icon3"></i></a>
+
+            </div>
+            <div class="arrow">
+                <a href="#experience"><i class="fa-solid fa-angle-down"></i></a>
+            </div>
+
+        </section>
+        <main id="experience">
+            <section class="experience">
+                <h1 class="section-title">Experience</h1>
+                <div class="job">
+                    <img src="images/comma_capital_logo.jpeg" alt="comma capital">
+                    <div>
+                        <h2>Comma Capital</h2>
+                        <p>Comma University Fellow</p>
+                    </div>
+                </div>
+                <div class="job">
+                    <img src="images/sdocs_logo.jpeg" alt="SDocs">
+                    <div>
+                        <h2>S-Docs for Salesforce</h2>
+                        <p>Software Engineering Intern</p>
+                    </div>
+                </div>
+                <div class="job">
+                    <img src="images/SRG.png" alt="SRG">
+                    <div>
+                        <h2>Strategic Reasoning Group</h2>
+                        <p>Research Intern</p>
+                    </div>
+                </div>
+                <div class="job">
+                    <img src="images/Mhacks.png" alt="MHacks">
+                    <div>
+                        <h2>MHacks</h2>
+                        <p>Logistics</p>
+                    </div>
+                </div>
+                <div class="arrow">
+                    <a href="#additional-info"><i class="fa-solid fa-angle-down"></i></a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- New section starts here -->
+        <main id="additional-info">
+            <div id="additional-info" role="main">
+                <div class="section additional-info">
+                    <h2 class="section-title">Currently...</h2>
+                    <div class="status-container">
+                        <div class="status-card now-playing">
+                            <img src="images/travis_scott.jpg" alt="Album cover" class="status-image">
+                            <div class="status-details">
+                                <h3>Listening</h3>
+                                <p class="status-title">My Eyes</p>
+                                <p class="status-subtitle">Travis Scott</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="status-card currently-reading">
+                            <img src="images/zero_to_one.jpg" alt="Book cover" class="book-image">
+                            <div class="status-details">
+                                <h3>Reading</h3>
+                                <p class="status-title">Zero to One</p>
+                                <p class="status-subtitle">Peter Thiel</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 30%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add new status cards here -->
+                    <div class="status-container">
+                        <div class="status-card now-watching">
+                            <img src="images/gravity_falls.jpg" alt="TV show cover" class="book-image">
+                            <div class="status-details">
+                                <h3>Watching</h3>
+                                <p class="status-title">Gravity Falls</p>
+                                <p class="status-subtitle">Season 2</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="status-card currently-coding">
+                            <img src="images/conmodus.png" alt="Coding project cover" class="book-image">
+                            <div class="status-details">
+                                <h3>Coding</h3>
+                                <p class="status-title">Building</p>
+                                <p class="status-subtitle">Conmodus</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 45%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <button id="toggleComets" class="toggle-comets">Toggle Comets</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
